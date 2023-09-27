@@ -138,3 +138,47 @@ arr.forEach(function (elem){
 })
 
 console.log(add);
+
+// 13. loop an array of objects and remove all objects which dont have gender's value male.
+
+var array = [
+    {name: "Ankit", gender: "male"},
+    {name: "Ankita", gender : "female"},
+    {name: "xyz", gender : "not defined"},
+    {name: "Akash", gender : "male"},
+    {name: "Siddath", gender : "male"},
+    {name: "Abc", gender : "not defined"},
+    {name: "Riya", gender : "female"},
+    {name: "Diya", gender : "female"},
+]
+var count = 0;
+array.forEach(function(elem){
+   if (elem.gender !== "male") {
+        count ++;
+    }
+})
+for(var i = 1;i<=count;i++){
+    for(var j = 0; j<array.length; j++){
+        if(array[j].gender !== "male"){
+            array.splice(j,1);
+        }
+}
+}
+console.log(array);
+
+// or we can use
+// var new_arr =array.filter(function(elem){ //this .filter will creates a diff array and store the changes on it. Not in real (array). 
+//     return elem.gender === "male";
+// })
+// array= new_arr;
+// console.log(array); 
+
+// 14. write a js function to clone an array
+
+function cloneArr(arr){
+    return [...arr];
+}
+var newarr = cloneArr([1,2,3,5,4,3,5])
+console.log(newarr);
+
+// 15. 
