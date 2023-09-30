@@ -1,6 +1,12 @@
-var rect = document.querySelector("#center");
+const scroll = new LocomotiveScroll({
+    el: document.querySelector('#main'),
+    smooth: true
+});
 
-rect.addEventListener("mousemove", function(){
-    console.log(rect.getBoundingClientRect());
-})
+function circleMouseFollower(){
+    window.addEventListener("mousemove",function(details){
+        this.document.querySelector("#minicircle").style.transform = `translate(${details.clientX}px,${details.clientY}px)`;
+    })
+}
 
+circleMouseFollower();
