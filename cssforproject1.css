@@ -24,7 +24,13 @@ html,body{
     position: absolute;
     background-color: white;
 }
-
+.bound{
+    width: fit-content;
+    overflow: hidden;
+}
+.bound .boundelem{
+    transform: translateY(100%);
+}
 #main{
     background-color: black;
     width: 100%;
@@ -60,11 +66,14 @@ nav a{
     line-height: .9;
     opacity: .6;
 }
-#heading .secondh1{
+#heading #secondh1{
     margin-left: 150px;
 }
 .blocktext{
     width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
 }
 .blocktext h5{
     text-align: right;
@@ -73,6 +82,9 @@ nav a{
 }
 
 #smallheading{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
     margin-top: 80px;
     padding-right: 3vw;
     text-transform: uppercase;
