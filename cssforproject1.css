@@ -16,7 +16,7 @@ html,body{
 }
 
 #minicircle{
-    transition: cubic-bezier(0.19, 1, 0.22, 1)0.5s;
+    transition: cubic-bezier(0.19, 1, 0.22, 1)1s;
     width: 13px;
     height: 13px;
     border-radius: 50%;
@@ -160,9 +160,11 @@ nav a{
 }
 .elem img{
     height: 140%;
-    display: none;
+    pointer-events: none;
+    opacity: 0;
     position: absolute;
     z-index: 999;
+    transform: translate(-50%,-50%);
 }
 
 #about{
